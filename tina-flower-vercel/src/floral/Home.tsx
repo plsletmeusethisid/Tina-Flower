@@ -1,0 +1,13 @@
+'use client';
+import Link from 'next/link';
+import {ScrollScrub} from '@/components/ScrollScrub';
+import {CollectionGallery,FeaturedProducts} from './cards';
+import {InquiryBanner} from './layout';
+import {useI18n} from './i18n';
+export function Home(){const {t,href}=useI18n();return <>
+ <ScrollScrub/>
+ <section className="fl-intro" id="intro"><div className="fl-intro-edge"><span>{t('THE ART OF FLOWERS','꽃이 전하는 예술')}</span><span>✳</span></div><div className="fl-intro-main"><div className="fl-intro-text"><h2>{t('Every bloom','모든 꽃에는')}<br/>{t('tells a','저마다의')} <em>{t('story.','이야기가 있습니다.')}</em></h2><p>{t('An exploration of natural beauty, sculptural arrangements, and thoughtful floral design.','자연의 아름다움과 입체적인 형태, 섬세한 손길이 어우러진 특별한 꽃 디자인을 소개합니다.')}</p><Link className="fl-underline-link" href={href('/about')}>{t('Our philosophy','우리의 철학')} <span>↗</span></Link></div><div className="fl-intro-art"><img loading="lazy" src="/images/products/orchid-atelier.webp" alt={t('Vibrant pink orchid arrangement in a blue ceramic bowl','푸른 도자기 화분에 담긴 선명한 분홍색 난초 꽃장식')}/></div></div><div className="fl-intro-rule"><span>{t('BOTANICAL ARTISTRY','자연을 담은 작품')}</span><span>{t('DESIGNED WITH INTENTION','마음을 담은 디자인')}</span></div></section>
+ <CollectionGallery/><FeaturedProducts/>
+ <section className="fl-event-feature"><div className="fl-event-words"><span className="fl-overline">{t('MOMENTS WORTH REMEMBERING','기억에 남을 소중한 순간')}</span><h2>{t('For the days','특별한 날을')}<br/>{t('that','위한')} <em>{t('matter.','꽃.')}</em></h2><p>{t('Floral design for ceremonies, gatherings, corporate moments, and celebrations.','기념식과 모임, 기업 행사와 축하의 순간에 어울리는 꽃장식을 제안합니다.')}</p><Link href={href('/events')} className="fl-event-link">{t('Explore event styling','행사 꽃장식 살펴보기')} <span>↗</span></Link></div><img loading="lazy" src="/images/products/ceremony-in-bloom.webp" alt={t('Sculptural tiered arrangements of white and blue flowers','흰색과 푸른색 꽃을 층층이 장식한 조형적인 작품')}/></section>
+ <section className="fl-story"><div className="fl-story-image"><img loading="lazy" src="/images/products/driftwood-garden.webp" alt={t('Sculptural terrarium with driftwood and succulents','유목과 다육식물로 만든 조형적인 테라리움')}/></div><div className="fl-story-copy"><span className="fl-overline">{t('THE STUDIO','티나 플라워 스튜디오')}</span><h2>{t('Crafted with','정성을 담아')}<br/><em>{t('intention.','완성합니다.')}</em></h2><p>{t('We believe that thoughtful floral design begins with the little things: unexpected shapes, delicate colors, and natural details that invite a closer look.','아름다운 꽃 디자인은 작은 디테일에서 시작됩니다. 자연스러운 선과 섬세한 색감, 가까이서 볼수록 빛나는 요소들을 정성스럽게 담아냅니다.')}</p><Link href={href('/about')} className="fl-underline-link">{t('Discover the studio','스튜디오 소개')} <span>↗</span></Link></div></section><InquiryBanner/>
+ </>}
