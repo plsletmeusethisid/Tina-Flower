@@ -12,6 +12,8 @@ A Vercel-ready **Next.js 15 + React 19 + TypeScript** adaptation of the latest T
 - Server-side inquiry validation, bilingual errors, honeypot spam trap, optional rate limiting via Upstash, and optional Resend/Supabase integrations.
 - SEO sitemap containing both language versions, responsive layouts, and localized page headings.
 
+> **Vercel CSS build fix:** This ZIP removes an incorrect PostCSS/Tailwind configuration from the initial archive. See `BUILD-FIX.md` for the changes and redeployment steps.
+
 ## 1. Run locally
 
 ```bash
